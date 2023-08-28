@@ -9,7 +9,7 @@ const Newsletter = () => {
         <div className="flex flex-col items-center relative">
           <h3 className="font-bold text-4xl mb-6">Subscribe Our Newsletter</h3>
           <p>Get the latest information and promo offers directly</p>
-          <div className="flex gap-4 mt-8">
+          <div className="grid grid-cols-1 sm:flex gap-4 mt-8">
             <input
               className="border border-black py-2 px-4"
               placeholder="Input Email Address"
