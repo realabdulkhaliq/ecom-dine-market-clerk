@@ -19,7 +19,6 @@
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
     "@vercel/postgres": "^0.4.0",
-    "autoprefixer": "10.4.14",
     "class-variance-authority": "^0.6.1",
     "clsx": "^1.2.1",
     "drizzle-orm": "^0.27.2",
@@ -29,7 +28,6 @@
     "next": "13.4.10",
     "next-intl": "^2.19.1",
     "next-sanity": "^5.1.2",
-    "postcss": "8.4.26",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.1",
@@ -39,12 +37,14 @@
     "styled-components": "5.2",
     "swiper": "^10.0.4",
     "tailwind-merge": "^1.13.2",
-    "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.6",
     "typescript": "5.1.6"
   },
   "devDependencies": {
     "@types/react-slick": "^0.23.10",
-    "drizzle-kit": "^0.19.9"
+    "autoprefixer": "^10.4.15",
+    "drizzle-kit": "^0.19.9",
+    "postcss": "^8.4.28",
+    "tailwindcss": "^3.3.3"
   }
 }

@@ -81,4 +81,7 @@
   .center {
     @apply flex justify-center items-center;
   }
+  .mobile {
+    @apply mx-4 my-5;
+  }
 }

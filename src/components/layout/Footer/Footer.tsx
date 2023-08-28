@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <footer>
       <MaxWidthWrapper>
-        <section className="grid grid-cols-5 py-20">
-          <div className="grid col-span-2 mr-28">
+        <section className="grid grid-cols-1 gap-y-3 sm:gap-y-0 sm:grid-cols-5 py-20 mx-8 sm:mx-0">
+          <div className="grid sm:col-span-2 mr-28">
             <figure>
               <Image src={logo} alt="Logo" />
             </figure>

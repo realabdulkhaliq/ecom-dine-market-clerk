@@ -15,7 +15,6 @@ const CartSummary = () => {
       .then((response) => {
         setQuant(response[0].quant);
         setPrice(response[0].price);
-        console.log("Quantity", qunat);
       });
   }, [userId, qunat, price]);
 

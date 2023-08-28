@@ -8,7 +8,7 @@ const AllProducts = async () => {
   return (
     <section className="my-20">
       <MaxWidthWrapper>
-        <div className="grid grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
           {allProducts.map((singleProduct: IProduct) => (
             <ProductCard
               image={singleProduct.image}

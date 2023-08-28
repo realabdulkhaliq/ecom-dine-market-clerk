@@ -5,13 +5,6 @@ import Link from "next/link";
 import { urlForImage } from "../../../sanity/lib/image";
 
 const ProductCard = (props: IProduct) => {
-  // const handleAddToCart = async () => {
-  //   const res = await fetch("/api/cart", {
-  //     method: "POST",
-  //     body: JSON.stringify({ product_id: props._id }),
-  //   });
-  //   const result = await res.json();
-  // };
   return (
     <main>
       <Link href={`/products/${props.slug.current}`}>

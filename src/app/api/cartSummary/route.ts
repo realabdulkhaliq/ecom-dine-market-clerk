@@ -7,8 +7,8 @@ export async function GET(request: NextRequest) {
   try {
     const result = await db
       .select({
-        price: sql<number>`sum(cartTable.product_quantity * cartTable.product_price)`,
-        quant: sql<number>`sum(cartTable.product_quantity)`,
+        price: sql<number>`sum(${cartTable.product_price})`,
+        quant: sql<number>`sum(${cartTable.product_quantity})`,
       })
       .from(cartTable)
       .where(eq(cartTable.user_id, uid));

@@ -1,4 +1,3 @@
-import Header from "@/components/layout/Header/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
@@ -6,6 +5,8 @@ import Footer from "@/components/layout/Footer/Footer";
 import Copyright from "@/components/layout/Footer/Copyright";
 import ReduxProviderWrapper from "@/components/shared/Wrapper/ReduxProviderWrapper";
 import { ClerkProvider } from "@clerk/nextjs";
+import Header from "@/components/layout/Header/Header";
+import MobileNav from "@/components/layout/Header/Mobile";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,12 @@ export default function RootLayout({
         {/* <body className={`${inter.className} bg-[#FCFCFC]`}> */}
         <body className={` bg-[#FCFCFC]`}>
           <ReduxProviderWrapper>
-            <Header />
+            <div className="hidden sm:block">
+              <Header />
+            </div>
+            <div className="sm:hidden">
+              <MobileNav />
+            </div>
             {children}
             <Footer />
             <Copyright />

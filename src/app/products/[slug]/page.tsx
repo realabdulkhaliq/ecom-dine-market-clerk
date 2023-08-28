@@ -43,16 +43,19 @@ const CategoryPage = async ({ params }: { params: { slug: string } }) => {
       <MaxWidthWrapper>
         <section className="">
           {productBySlug.map((singleProduct: IProduct) => (
-            <div key={singleProduct._id} className="flex gap-10">
+            <div
+              key={singleProduct._id}
+              className="grid grid-cols-1 sm:flex gap-10"
+            >
               {/* Left */}
-              <div className="flex gap-8 basis-8/12">
+              <div className="grid grid-cols-1 sm:flex gap-8 basis-8/12">
                 <div>
                   <Image
                     src={urlForImage(singleProduct.image).url()}
                     alt={singleProduct.alt}
                     width={100}
                     height={100}
-                    className="h-[100px] w-[100px]"
+                    className="h-[100px] w-[100px] hidden sm:block"
                   />
                 </div>
                 <div>
@@ -104,11 +107,11 @@ const CategoryPage = async ({ params }: { params: { slug: string } }) => {
           ))}
         </section>
         <section className="bg-white mt-20 py-16 px-12 -z-10 relative">
-          <h4 className="font-extrabold text-9xl absolute top-3 -z-10 text-[#ECEDEF]">
+          <h4 className="font-extrabold text-4xl sm:text-9xl absolute top-3 -z-10 text-[#ECEDEF]">
             Overview
           </h4>
           <h3 className="font-bold text-3xl">Product Information</h3>
-          <div className="border-t-2 flex mt-8 pt-8">
+          <div className="border-t-2 grid grid-cols-1 sm:flex mt-8 pt-8">
             <div className="basis-1/3">
               <h4 className="text-[#666666] font-bold">PRODUCT DETAILS</h4>
             </div>
@@ -124,7 +127,7 @@ const CategoryPage = async ({ params }: { params: { slug: string } }) => {
               </p>
             </div>
           </div>
-          <div className="flex py-8">
+          <div className="grid grid-cols-1 sm:flex py-8">
             <div className="basis-1/3">
               <h4 className="text-[#666666] font-bold">PRODUCT CARE</h4>
             </div>

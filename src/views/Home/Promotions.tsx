@@ -12,8 +12,8 @@ const Promotions = () => {
           <h3 className="text-blue-500 font-bold">PROMOTIONS</h3>
           <h3 className="text-4xl font-bold">Our Promotions Events</h3>
         </div>
-        <main className="flex gap-5">
-          <div className="flex flex-col gap-5 basis-5/12">
+        <main className="grid grid-cols-1 sm:flex gap-5">
+          <div className="grid grid-cols-1 sm:flex sm:flex-col gap-5 sm:basis-5/12">
             <div className="bg-gray-300 flex">
               <article className="p-6">
                 <h3 className="font-bold text-2xl">
@@ -38,8 +38,8 @@ const Promotions = () => {
               </p>
             </div>
           </div>
-          <div className="flex gap-5 basis-7/12">
-            <div className="bg-[#EFE1C7] flex flex-col basis-1/2">
+          <div className="sm:flex gap-5 sm:basis-7/12">
+            <div className="bg-[#EFE1C7] flex flex-col basis-1/2 my-3 sm:my-0">
               <article className="p-6">
                 <h3>Flex Sweatshirt</h3>
                 <p className="text-lg">

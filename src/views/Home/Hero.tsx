@@ -7,11 +7,12 @@ import featured2 from "@/assets/f2.webp";
 import featured3 from "@/assets/f3.webp";
 import featured4 from "@/assets/f4.webp";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 const Hero = () => {
   return (
     <MaxWidthWrapper>
-      <section className="flex">
+      <section className="grid grid-cols-1 sm:flex">
         {/* Left */}
         <div className="my-10 md:basis-5/12">
           <Badge className="text-[#0000FF] font-semibold text-lg bg-[#E1EDFF] px-5 py-1 rounded-lg mt-9">
@@ -24,9 +25,12 @@ const Hero = () => {
             Anyone can beat you but no one can beat your outfit as long as you
             wear Dine outfits.
           </p>
-          <button className="flex flex-col md:flex-row items-center mt-6 bg-black text-white py-3 px-4 text-base font-bold md:w-40">
-            <ShoppingCart size={20} className="mr-3 shrink-0" /> Start Shopping
-          </button>
+          <Link href={"/products"}>
+            <button className="flex flex-col md:flex-row items-center mt-6 bg-black text-white py-3 px-4 text-base font-bold md:w-40">
+              <ShoppingCart size={20} className="mr-3 shrink-0" /> Start
+              Shopping
+            </button>
+          </Link>
           <div className="grid grid-cols-2 md:grid-cols-4 mt-8">
             <Image src={featured1} alt="Bazaar" />
             <Image src={featured2} alt="Bustle" />
