@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
         </div>
         {/* Right */}
-        <div className="md:basis-7/12 bg-[#FFECE3] bg-[90%] rounded-full my-8">
+        <div className="md:basis-7/12 bg-[#FFECE3] bg-[90%] rounded-full my-8 mx-auto">
           {/* <div className="bg-[#FFECE3] rounded-full w-[90%] h-[90%] absolute top-10"></div> */}
           <Image
             src={headerImage}
