@@ -37,7 +37,9 @@ const MobileNav = () => {
               <button onClick={() => setIsOpen(!isOpen)}>
                 <X />
               </button>
-              <Cart />
+              <div className="ml-6">
+                <Cart />
+              </div>
               <Menu />
             </div>
           ) : (

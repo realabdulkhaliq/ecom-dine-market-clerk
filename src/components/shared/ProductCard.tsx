@@ -14,11 +14,12 @@ const ProductCard = (props: IProduct) => {
             alt={props.alt}
             width={400}
             height={400}
+            priority={true}
             className="w-[330px] h-[380px]"
           ></Image>
           <h3 className="font-bold text-lg">{props.title}</h3>
           <h3 className="font-bold text-gray-400">{props.kind.kind}</h3>
-          <p className="font-bold text-lg">$ {props.price}</p>
+          <p className="font-bold text-lg">RS: {props.price}</p>
         </div>
       </Link>
       {/* <AddToCart item={props} /> */}

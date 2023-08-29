@@ -101,7 +101,7 @@ const CategoryPage = async ({ params }: { params: { slug: string } }) => {
 
                 <AddToCart singleProduct={singleProduct} />
                 <p className="text-2xl font-bold mt-4">
-                  $ {singleProduct.price.toFixed(2)}
+                  RS: {singleProduct.price.toFixed(2)}
                 </p>
               </div>
             </div>

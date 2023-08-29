@@ -51,11 +51,14 @@ const CartPage = () => {
         {/* Filled Cart Section */}
         {userId ? (
           products?.length != 0 ? (
-            <section className="flex gap-8">
+            <section className="grid grid-cols-1 sm:flex gap-8">
               {/* Right Product Section */}
               <main className="flex flex-col basis-3/4 gap-y-10">
                 {products?.map((product: any) => (
-                  <div className="flex gap-4 bg-slate-200 p-2" key={product.id}>
+                  <div
+                    className="grid grid-cols-1 sm:flex gap-4 bg-slate-200 p-2"
+                    key={product.id}
+                  >
                     {/* Image */}
                     <div className="rounded-xl">
                       <Image
@@ -86,7 +89,7 @@ const CartPage = () => {
                       </h5>
                       <span className="flex items-center justify-between">
                         <p className="font-bold text-xl">
-                          $ {product.product_price}
+                          RS: {product.product_price}
                         </p>
                         {/* Add Minus Product */}
                         <div className="flex gap-x-4 items-center">
@@ -125,7 +128,7 @@ const CartPage = () => {
                 </div>
                 <div className="flex justify-between">
                   <p>Sub Total</p>
-                  <p>$ {price}</p>
+                  <p>RS {price}</p>
                 </div>
                 <StripeCheckoutButton products={products} />
               </div>

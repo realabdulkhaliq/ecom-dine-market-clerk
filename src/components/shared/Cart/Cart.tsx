@@ -25,7 +25,7 @@ const Cart = () => {
     <Link href={"/cart"}>
       <div className="bg-gray-200 rounded-full p-3 w-12 h-12 relative hover:scale-110 duration-300">
         <span className="text-white bg-red-500 text-xs h-4 px-1 text-center rounded-full absolute top-0 right-0">
-          {qunat || cartValue}
+          {qunat}
         </span>
         <ShoppingCart className="self-center" />
       </div>
