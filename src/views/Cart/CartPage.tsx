@@ -4,7 +4,7 @@ import { Bird, ShoppingBagIcon, Trash2 } from "lucide-react";
 import { useAuth } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 import MaxWidthWrapper from "@/components/shared/Wrapper/MaxWidthWrapper";
-import CartSummary from "./CartSummary";
+import StripeCheckoutButton from "@/components/shared/Checkout";
 
 const CartPage = () => {
   const [products, setProducts] = useState<any>(null);
@@ -16,7 +16,6 @@ const CartPage = () => {
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
-        console.log(data);
       });
   }, [userId, state]);
 
@@ -30,6 +29,20 @@ const CartPage = () => {
     });
     setState(!state);
   }
+
+  const [qunat, setQuant] = useState(null);
+  const [price, setPrice] = useState(null);
+
+  useEffect(() => {
+    fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/cartSummary?user_id=${userId}`
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        setQuant(response[0].quant);
+        setPrice(response[0].price);
+      });
+  }, [userId, qunat, price]);
 
   return (
     <main>
@@ -50,6 +63,7 @@ const CartPage = () => {
                         alt={product.product_title}
                         width={200}
                         height={400}
+                        priority={true}
                         className="w-48 h-60 rounded-2xl"
                       />
                     </div>
@@ -103,7 +117,18 @@ const CartPage = () => {
               </main>
               {/* Right Product Section End */}
               {/* Left Summary Section */}
-              <CartSummary />
+              <div className="basis-1/4 bg-[#ececec] p-8 max-h-64">
+                <p className="font-bold text-xl">Order Summary</p>
+                <div className="flex justify-between my-5">
+                  <p>Quantity</p>
+                  {qunat} {qunat! > 1 ? "Products" : "Product"}
+                </div>
+                <div className="flex justify-between">
+                  <p>Sub Total</p>
+                  <p>$ {price}</p>
+                </div>
+                <StripeCheckoutButton products={products} />
+              </div>
             </section>
           ) : (
             <section className="flex flex-col">

@@ -55,6 +55,7 @@ const CategoryPage = async ({ params }: { params: { slug: string } }) => {
                     alt={singleProduct.alt}
                     width={100}
                     height={100}
+                    priority={true}
                     className="h-[100px] w-[100px] hidden sm:block"
                   />
                 </div>
