@@ -45,6 +45,7 @@ const Hero = () => {
             src={headerImage}
             height={1000}
             width={1000}
+            priority
             alt=""
             className="h-[110%] w-full -my-8"
           ></Image>

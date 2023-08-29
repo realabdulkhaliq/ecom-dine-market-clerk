@@ -15,16 +15,18 @@ const Promotions = () => {
         <main className="grid grid-cols-1 sm:flex gap-5">
           <div className="grid grid-cols-1 sm:flex sm:flex-col gap-5 sm:basis-5/12">
             <div className="bg-gray-300 flex">
-              <article className="p-6">
-                <h3 className="font-bold text-2xl">
-                  GET UP TO <span className="text-4xl font-bold">60%</span>
+              <article className="p-3 sm:p-6">
+                <h3 className="font-bold text-lg sm:text-2xl">
+                  GET UP TO{" "}
+                  <span className="text-lg sm:text-4xl font-bold">60%</span>
                 </h3>
-                <p className="text-lg">For the summer season</p>
+                <p className="text-base sm:text-lg">For the summer season</p>
               </article>
               <figure>
                 <Image
                   src={event1}
                   alt="60% OFF promotion"
+                  priority
                   width={450}
                   height={500}
                 />
@@ -48,7 +50,12 @@ const Promotions = () => {
                 </p>
               </article>
               <figure className="mx-auto">
-                <Image src={event2} alt="60% OFF promotion" height={325} />
+                <Image
+                  src={event2}
+                  alt="60% OFF promotion"
+                  height={325}
+                  priority
+                />
               </figure>
             </div>
             <div className="bg-[#D7D7D9] flex flex-col basis-1/2">
@@ -60,7 +67,12 @@ const Promotions = () => {
                 </p>
               </article>
               <figure className="mx-auto">
-                <Image src={event3} alt="60% OFF promotion" height={325} />
+                <Image
+                  src={event3}
+                  alt="60% OFF promotion"
+                  height={325}
+                  priority
+                />
               </figure>
             </div>
           </div>
