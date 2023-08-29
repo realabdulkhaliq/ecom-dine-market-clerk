@@ -31,7 +31,7 @@ const Header = () => {
           </SignedOut>
           <Cart />
           <SignedIn>
-            <UserButton />
+            <UserButton afterSignOutUrl="/" />
           </SignedIn>
         </nav>
       </MaxWidthWrapper>
