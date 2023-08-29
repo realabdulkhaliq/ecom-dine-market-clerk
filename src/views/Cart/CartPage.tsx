@@ -60,7 +60,7 @@ const CartPage = () => {
                     key={product.id}
                   >
                     {/* Image */}
-                    <div className="rounded-xl">
+                    <div className="rounded-xl mx-auto">
                       <Image
                         src={product.image_url}
                         alt={product.product_title}
